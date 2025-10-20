@@ -1,0 +1,67 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbuk5ivxwxc8g"]
+
+[ext_resource type="Script" uid="uid://dlwyx37ikv2di" path="res://scripts/levels.gd" id="1_hk6qi"]
+[ext_resource type="Texture2D" uid="uid://hjf03et62gh8" path="res://assets/tiles/2 Locations/Backgrounds/1.png" id="2_5ekxl"]
+
+[node name="levels" type="Node2D"]
+script = ExtResource("1_hk6qi")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="1" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(566, 302)
+scale = Vector2(20, 20)
+texture = ExtResource("2_5ekxl")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 436.0
+offset_top = 58.0
+offset_right = 653.0
+offset_bottom = 127.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 50
+text = "Signaling"
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.185
+anchor_top = 0.519
+anchor_right = 0.185
+anchor_bottom = 0.519
+offset_left = -42.12
+offset_top = -44.312
+offset_right = 42.88
+offset_bottom = 44.688
+theme_override_font_sizes/font_size = 50
+text = "1"
+
+[node name="Button2" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.382
+anchor_top = 0.515
+anchor_right = 0.382
+anchor_bottom = 0.515
+offset_left = 51.936
+offset_top = -34.72
+offset_right = 136.936
+offset_bottom = 42.28
+theme_override_font_sizes/font_size = 50
+text = "2"
+
+[node name="Button3" type="Button" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = 0.534
+anchor_top = 0.5
+anchor_right = 0.534
+anchor_bottom = 0.54
+offset_left = 231.832
+offset_top = -32.0
+offset_right = 313.832
+offset_bottom = 19.08
+theme_override_font_sizes/font_size = 50
+text = "coming 
+ soon"
+
+[connection signal="pressed" from="CanvasLayer/Button" to="." method="_on_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="CanvasLayer/Button3" to="." method="_on_button_3_pressed"]

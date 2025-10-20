@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://doaifdnpf23u0"]
+
+[ext_resource type="Script" uid="uid://de5to720dnw43" path="res://scripts/main_menu.gd" id="1_l6cm7"]
+[ext_resource type="Texture2D" uid="uid://hjf03et62gh8" path="res://assets/tiles/2 Locations/Backgrounds/1.png" id="2_ekxnf"]
+
+[node name="MainMenu" type="Node2D"]
+script = ExtResource("1_l6cm7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+offset_left = 338.0
+offset_top = 110.0
+offset_right = 773.0
+offset_bottom = 247.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 100
+text = "Signaling"
+
+[node name="play" type="Button" parent="CanvasLayer"]
+offset_left = 490.0
+offset_top = 273.0
+offset_right = 639.0
+offset_bottom = 364.0
+theme_override_font_sizes/font_size = 60
+text = "Start
+"
+
+[node name="levels" type="Button" parent="CanvasLayer"]
+offset_left = 423.0
+offset_top = 398.0
+offset_right = 695.0
+offset_bottom = 489.0
+theme_override_font_sizes/font_size = 60
+text = "Levels"
+
+[node name="quit" type="Button" parent="CanvasLayer"]
+offset_left = 493.0
+offset_top = 519.0
+offset_right = 642.0
+offset_bottom = 610.0
+theme_override_font_sizes/font_size = 60
+text = "Quit
+"
+
+[node name="1" type="Sprite2D" parent="."]
+position = Vector2(327, 331)
+scale = Vector2(10, 10)
+texture = ExtResource("2_ekxnf")
+
+[node name="2" type="Sprite2D" parent="."]
+position = Vector2(639, 335)
+scale = Vector2(10, 10)
+texture = ExtResource("2_ekxnf")
+
+[node name="3" type="Sprite2D" parent="."]
+position = Vector2(941, 332)
+scale = Vector2(10, 10)
+texture = ExtResource("2_ekxnf")
+
+[connection signal="pressed" from="CanvasLayer/play" to="." method="_on_play_pressed"]
+[connection signal="pressed" from="CanvasLayer/levels" to="." method="_on_levels_pressed"]
+[connection signal="pressed" from="CanvasLayer/quit" to="." method="_on_quit_pressed"]

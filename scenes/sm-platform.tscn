@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://ddttha2m0o4pw"]
+
+[ext_resource type="Texture2D" uid="uid://dgugsi36xrvo6" path="res://assets/Mossy Assets/Mossy Tileset/Mossy - TileSet.png" id="1_ay27g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_llvko"]
+size = Vector2(382.25, 275.5)
+
+[node name="sm-platform" type="AnimatableBody2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_ay27g")
+region_enabled = true
+region_rect = Rect2(1523.33, 1508.34, 516.896, 527.118)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.875, -17)
+shape = SubResource("RectangleShape2D_llvko")
